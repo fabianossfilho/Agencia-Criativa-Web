@@ -1,38 +1,38 @@
-/* Azul Elétrico: #7DF9FF */
-/* Verde-Água Neon: #39FF14 */
+/*  Block: .bloco
+    Element: __elemento
+    Modifier: --modificador
+
+        - Remover estilos redundantes;
+        - Criar classes reutilizáveis para evitar repetições;
+        - Separar estilos gerais, de componentes e específicos por seções;
+        - Substituir seletores genéricos por classes bem definidas;
+        - Evitar seletores de ID e seletores profundos que dificultam a manutenção;
+        - Usar classes BEM (.bloco__elemento--modificador);
+        - Reduzir a especificidade do CSS;
+        - Garantir que o CSS esteja organizado de forma lógica e clara;
+        - Evitar seletores muito específicos para facilitar a reutilização dos estilos. */
+
+/*Reset*/
 * {
     margin: 0;
     padding: 0;
 }
 
+/*Configurações Gerais*/
 body {
-    font-size: medium;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    color: #FFFFFF;
+    background-color: #0A0A0A;
     text-align: center;
     display: flex;
     flex-direction: column;
-    background-color: #0A0A0A;
-    color: #FFFFFF;
-    font-family: 'Courier New', Courier, monospace;
+    align-items: center;
+    min-width: 100vw;
 }
 
 header {
-    background-color: #111111;
-    color: #7DF9FF;
-    border-bottom: 2px solid #7DF9FF;
-    padding: 1rem;
-    text-align: center;
-}
-
-h1, h2, h3 {
-    color: #7DF9FF;
-    text-shadow: 0 0 10px #7DF9FF;
-}
-
-li {
-    list-style-type: none;
-    font-size: smaller;
-    display: inline;
-    font-feature-settings: normal;
+    max-width: 100%;
 }
 
 a {
@@ -50,21 +50,10 @@ a:hover {
     padding: 0.2rem 0.5rem;
 }
 
-section {
-    background-color: #2E2E2E;
-    color: #F8F8F8;
-    border: 2px solid #7DF9FF;
-    border-radius: 10px;
-    margin: 2rem auto;
-    padding: 2rem;
-    max-width: 800px;
-    box-shadow: 0 0 10px #CCCCCC;
-    box-sizing: border-box;
-    width: 100%;
-}
 
-button {
-    background-color: #39FF14;
+/*Blocos reutilizáveis*/
+.botao {
+    background-color: #39ff14;
     color: #0A0A0A;
     border: none;
     padding: 0.7rem 1.5rem;
@@ -74,235 +63,218 @@ button {
     transition: 0.5s;
 }
 
-button:hover {
+.botao:hover {
     background-color: #7DF9FF;
     color: #000;
 }
 
-label {
-  font-size: 1rem;
-}
-
-input {
-  width: 20rem;
-  padding: 0.5rem;
-  font-size: 1rem;
-}
-
-.mensagem {
-    width: 30rem;
-    height: 30rem;
-}
-
-button, label, input {
-    margin: 3px;
-}
-
-
-form {
-    color: #FFFFFF;
-    background-color: #111111;
-    border: 3px solid;
+.section {
+    background-color: #2e2e2e;
+    border: 2px solid #7df9ff;
     border-radius: 10px;
-    border-color: #39FF14;
-    margin: 2em auto;
+    margin: 2rem auto;
     padding: 2rem;
-    max-width: 600px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;        
+    max-width: 800px;
+    box-shadow: 0 0 10px #CCCCCC;
 }
-    
-input, textarea {
-    background-color: #F8F8F8;
-    color: #000;
-    border: 1px solid #7B68EE;
-    border-radius: 5px;
-    padding: 0.5rem;
+
+.section__titulo {
+    color: #7DF9FF;
+    text-shadow: 0 0 10px #7DF9FF;
+    margin-bottom: 1rem;
+}
+
+.section__texto {
+    color: #f8f8f8;
+    line-height: 1.6;
+}
+
+/*Header*/
+.header {
+    background-color: #111111;
+    border-bottom: 2px solid #7df9ff;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+.header__titulos {
+    color: #7df9ff;
+    text-shadow: 0 0 10px #7df9ff;
+}
+
+/*Navegação*/
+.nav__lista {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.nav__link {
+    color: #39ff14;
+    text-decoration: none;
+    font-weight: bold;
     transition: 0.3s;
 }
 
-input:hover {
-    border-color: #39FF14;
-    box-shadow: 0 0 10px #39FF14;
-    outline: none;
+.nav__link:hover {
+    background-color: #39ff14;
+    color: #0A0A0A;
+    border-radius: 5px;
+    padding: 0.2rem 0.5rem;
 }
-    
-input:focus, textarea:focus {
-    border-color: #39FF14;
+
+/*Serviços*/
+.servicos__lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+
+.servicos__item {
+    background-color: #f8f8f8;
+    color: #000;
+    border-radius: 8px;
+    padding: 1rem;
+    transition: 0.3s;
+}
+
+.servicos__item:hover {
+    transform: translateY(-3px);
+}
+
+/*Depoimentos*/
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.depoimento__item {
+    background-color: #f8f8f8;
+    color: #000;
+    border-radius: 8px;
+    margin: 1rem;
+    padding: 1rem;
+    max-width: 600px;
+}
+
+/*Formulário*/
+.form {
+    background-color: #111;
+    border: 3px solid #39ff14;
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.form__etiqueta {
+    color: #fff;
+    font-weight: bold;
+}
+
+.form__input {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.5rem;
+    border: 1px solid #7b68ee;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.form__input:hover {
+    border-color: #39ff14;
+    box-shadow: 0 0 10px #39ff14;
+}
+
+.form__input:focus {
+    border-color: #39ff14;
     box-shadow: 0 0 10px #ffd700;
     outline: none;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
-    grid-template-areas:
-        "h3 h3"
-        "li li";
-    gap: 1rem;
+/*Footer*/
+
+.footer {
+    background-color: #111;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-top: 2px solid #7df9ff;
+    width: 100%;
 }
 
-.grid h3 {
-    grid-area: h3;
-    text-align: center;
+.footer__texto {
+    color: #7df9ff;
 }
 
-.grid ul {
-    grid-area: li;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.grid li {
-    background-color: #f8f8f8;
-    border-radius: 8px;
-    color: #000;
-    transition: 0.3s;
-}
-
-.flex p {
-    display: flex;
-    align-content: flex-start;
-    justify-content: space-around;
-    background: #f8f8f8;
-    margin: 1rem;
-    border-radius: 5px;
-    color: #000;
-}
-
-.flex h3 {
-    display: flex;
-    justify-content: center;
-}
-
+/*Media Queries*/
 @media (max-width: 600px) {
-    body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        margin: 0;
-        text-align: center;
-    }
 
-    label {
-        font-size: 1rem;
-    }
-    
-    input {
-        width: 10rem;
-        height: 0.8rem;
-        padding: 0.5rem;
-        font-size: 0.8rem;
-    }
-
-    .mensagem {
-        width: 10rem;
-        height: 20rem;
-    }
-
-    h1, h2, h3 {
-        color: #0026ff;
-        text-shadow: 0 0 10px #0026ff;
-    }
-
-    section {
+    .section {
         padding: 1rem;
         margin: 1rem;
-        width: 100%;
+        width: 90%;
         max-width: 300px;
-        margin: 2rem auto;
+    }
+
+    .form__input {
+        max-width: 100%;
+    }
+
+    .section__titulo {
+        color: #0026ff;
+        text-shadow: 0 0 10px #0026ff;
     }
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
-    body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        margin: 0;
-        text-align: center;
+
+    .section {
+        padding: 1rem;
+        margin: 1rem;
+        width: 90%;
+        max-width: 300px;
     }
 
-    label {
-        font-size: 1rem;
-    }
-    
-    input {
+    .form__input {
         width: 10rem;
         height: 0.8rem;
         padding: 0.5rem;
         font-size: 0.8rem;
     }
 
-    .mensagem {
-        width: 10rem;
-        height: 20rem;
-    }
-
-    h1, h2, h3 {
+    .section__titulo {
         color:  #248beb;
         text-shadow: 0 0 10px  #248beb;
     }
-
-    section {
-        padding: 1rem;
-        margin: 1rem;
-        width: 100%;
-        max-width: 300px;
-        margin: 2rem auto;
-    }
 }
+
 @media (min-width: 901px) {
-    body {
-        font-size: medium;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        background-color: #0A0A0A;
-        color: #FFFFFF;
-        font-family: 'Courier New', Courier, monospace;
+
+    .section {
+        margin: 1rem;
+        padding: 1rem;
+        max-width: 800px;
+        width: 100%;
     }
 
-    label {
-        font-size: 1rem;
-    }
-    
-    input {
+    .form__input {
         width: 20rem;
         padding: 0.5rem;
         font-size: 1rem;
-    }
-    
-    .mensagem {
-        width: 30rem;
-        height: 30rem;
+        height: 0.8rem;
     }
 
-    h1, h2, h3 {
-        color: #7DF9FF;
-        text-shadow: 0 0 10px #7DF9FF;
-    }
-    
-    section {
-        background-color: #2E2E2E;
-        color: #F8F8F8;
-        border: 2px solid #7DF9FF;
-        border-radius: 10px;
-        margin: 2rem auto;
-        padding: 2rem;
-        max-width: 800px;
-        box-shadow: 0 0 10px #CCCCCC;
-        box-sizing: border-box;
-        width: 100%;
+        .section__titulo {
+        color:  #0026ff;
+        text-shadow: 0 0 10px  #248beb;
     }
 }

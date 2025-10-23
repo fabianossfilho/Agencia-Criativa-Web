@@ -7,84 +7,84 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Agência Criativa Web</h1>
-        <h2>Seja Bem-vindo!</h2>
-        <p>Nós da Criativa Web estamos sempre um passo adiantados no caminho da criação!</p>
+    <header class="header">
+        <h1 class="header__titulos">Agência Criativa Web</h1>
+        <h2 class="header__titulos">Seja Bem-vindo!</h2>
+        <p class="header_texto">Nós da Criativa Web estamos sempre um passo adiantados no caminho da criação!</p>
     </header>
-    <nav>
-        <ul>
-            <li><a href="home">Home</a></li>
-            <li><a href="sobre">Sobre Nós</a></li>
-            <li><a href="servicos">Serviços</a></li>
-            <li><a href="depoimentos">Depoimentos</a></li>
-            <li><a href="contato">Contato</a></li>
+    <nav class="nav">
+        <ul class="nav__lista">
+            <li class="nav__item"><a href="home">Home</a></li>
+            <li class="nav__item"><a href="sobre">Sobre Nós</a></li>
+            <li class="nav__item"><a href="servicos">Serviços</a></li>
+            <li class="nav__item"><a href="depoimentos">Depoimentos</a></li>
+            <li class="nav__item"><a href="contato">Contato</a></li>
         </ul>
     </nav>
-    <main>
-        <section>
-            <h3>Home</h3>
-            <p>Transformamos ideias em experiências digitais incríveis.</p>
-            <p>Somos especialistas em design e desenvolvimento web focados em resultados e 
+    <main class="main">
+        <section class="section section--intro">
+            <h3 class="section__titulo">Home</h3>
+            <p class="section__texto">Transformamos ideias em experiências digitais incríveis.</p>
+            <p class="section__texto">Somos especialistas em design e desenvolvimento web focados em resultados e 
                 identidade visual forte.</p>
         </section>
-        <section>
-            <h3>Sobre Nós</h3>
-            <p>A Agência Criativa Web nasceu com o propósito de unir estratégia, design e tecnologia para 
+        <section class="section section--sobre">
+            <h3 class="section__titulo">Sobre Nós</h3>
+            <p class="section__texto">A Agência Criativa Web nasceu com o propósito de unir estratégia, design e tecnologia para 
                 impulsionar marcas no ambiente digital. <br>
                 Nossa equipe é formada por designers, 
                 desenvolvedores e estrategistas apaixonados por criar soluções visuais e funcionais que 
                 conectam pessoas e negócios.</p>
-            <p> Valores: Inovação, transparência, colaboração e excelência em cada projeto.</p>
+            <p class="section__texto"> Valores: Inovação, transparência, colaboração e excelência em cada projeto.</p>
         </section>
-        <section class="grid">
-            <h3>Serviços</h3>
-            <ul>
-                <li>🎨 Design Gráfico – Criação de identidades visuais, logotipos, materiais promocionais e redes sociais.</li>
-                <li>💻 Desenvolvimento Web – Sites modernos, responsivos e otimizados para desempenho e SEO.</li>
-                <li>🚀 Branding – Estratégias de posicionamento e construção de marca.</li>
-                <li>📱 Marketing Digital – Campanhas de anúncios, SEO, e gestão de mídias sociais.</li>
-                <li>🛍️ E-commerce – Lojas virtuais seguras e personalizadas.</li>
-                <li>🧠 Consultoria Criativa – Planejamento estratégico e inovação digital.</li>
+        <section class="section section--servicos grid">
+            <h3 class="section__titulo">Serviços</h3>
+            <ul class="servicos__lista">
+                <li class="servicos__item">🎨 Design Gráfico – Criação de identidades visuais, logotipos, materiais promocionais e redes sociais.</li>
+                <li class="servicos__item">💻 Desenvolvimento Web – Sites modernos, responsivos e otimizados para desempenho e SEO.</li>
+                <li class="servicos__item">🚀 Branding – Estratégias de posicionamento e construção de marca.</li>
+                <li class="servicos__item">📱 Marketing Digital – Campanhas de anúncios, SEO, e gestão de mídias sociais.</li>
+                <li class="servicos__item">🛍️ E-commerce – Lojas virtuais seguras e personalizadas.</li>
+                <li class="servicos__item">🧠 Consultoria Criativa – Planejamento estratégico e inovação digital.</li>
             </ul>
        </section>
-       <section class="flex">
-            <h3>Depoimentos</h3>
-            <p>⭐⭐⭐⭐⭐<br>
+       <section class="section section--depoimento flex">
+            <h3 class="section__titulo">Depoimentos</h3>
+            <p class="depoimento__item">⭐⭐⭐⭐⭐<br>
                 “A equipe da Agência Criativa Web superou nossas expectativas! Nosso novo site aumentou o 
                 engajamento em 40%.” <br>
                 Mariana Costa, Diretora da EcoStyle</p>
-            <p>⭐⭐⭐⭐ <br>
+            <p class="depoimento__item">⭐⭐⭐⭐ <br>
                 “Profissionais incríveis, com atendimento rápido e resultados visíveis!” <br>
                 Lucas Andrade, Empreendedor</p>
-            <p>⭐⭐⭐⭐⭐ <br>
+            <p class="depoimento__item">⭐⭐⭐⭐⭐ <br>
                 “Excelente experiência do início ao fim. Recomendo a todos que buscam qualidade e 
                 comprometimento.” <br>
                 Ana Ribeiro, Consultora de Marketing</p>
        </section>
-       <section>
-            <h3>Contato</h3>
+       <section class="section section--contato">
+            <h3 class="section__titulo">Contato</h3>
             <p>Entre em contato com nossa equipe e descubra como podemos transformar o seu projeto em realidade.</p>
             <ul>
                 <li>📍 Endereço: Rua Criatividade, 123 – São Paulo, SP</li><br>
                 <li>📞 Telefone: (11) 99999-9999</li><br>
                 <li>✉️ E-mail: contato@agenciacriativaweb.com</li>
             </ul>
-            <form>
-                <label>Nome:</label>
-                <input type="text"><br>
+            <form class="form">
+                <label class="form__etiqueta">Nome:</label>
+                <input class="form__input" type="text"><br>
 
-                <label>E-mail:</label>
-                <input type="email"><br>
+                <label class="form__etiqueta">E-mail:</label>
+                <input class="form__input" type="email"><br>
 
-                <label>Mensagem:</label>
-                <input class="mensagem" type="text"> <br>
-                <button type="submit">Enviar</button>
+                <label class="form__etiqueta">Mensagem:</label>
+                <input class="form__input" class="mensagem" type="text"> <br>
+                <button class="botao botao--primario" type="submit">Enviar</button>
             </form>
        </section>
     </main>
-    <footer>
-        <p>© 2025 Agência Criativa Web — Todos os direitos reservados.</p>
+    <footer class="footer">
+        <p class="footer__texto">© 2025 Agência Criativa Web — Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
