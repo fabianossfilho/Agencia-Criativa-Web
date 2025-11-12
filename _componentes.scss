@@ -1,0 +1,39 @@
+/*Componentes como botões, cards, menus, etc*/
+@use "variaveis" as v;
+@use "mixins" as m;
+
+.botao {
+    @include m.botao-basico;
+    @include m.borda-redonda;
+    background-color: v.$verde-neon;
+    color: v.$preto;
+    transition: v.$trans-time;
+
+    &:hover {
+        background-color: v.$azul-elect;
+        color: v.$preto;
+
+    }
+}
+
+.section {
+    background-color: v.$section-backgrnd;
+    border: 2px solid v.$azul-elect;
+    border-radius: 10px;
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 800px;
+    box-shadow: 0 0 10px v.$sec-box-shadow;
+
+    &__titulo {
+        color: v.$azul-elect;
+        text-shadow: 0 0 10px v.$azul-elect;
+        margin-bottom: 1rem;
+
+    }
+
+    &__texto {
+        color: v.$cor-secundaria;
+        line-height: v.$altura-linha;
+    }
+}

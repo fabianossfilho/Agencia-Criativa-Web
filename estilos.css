@@ -1,0 +1,169 @@
+@charset "UTF-8";
+/*Arquivo principal*/
+/*Estilos base como body, tipografia, reset)*/
+/*Cores, espaçamentos, fontes*/
+/*Estilos reutilizáveis*/
+/*Criar pelo menos 2 mixins reutilizáveis 
+    (ex: espaçamentos padrão, botão básico, border).*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #0A0A0A;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100vw;
+}
+
+a {
+  margin: 3rem;
+  color: #39FF14;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+a:hover {
+  border-radius: 5px;
+  color: #0A0A0A;
+  background-color: #39FF14;
+  padding: 0.2rem 0.5rem;
+}
+
+/*Componentes como botões, cards, menus, etc*/
+.botao {
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #39FF14;
+  color: #0A0A0A;
+  transition: 0.3s;
+}
+.botao:hover {
+  background-color: #7DF9FF;
+  color: #0A0A0A;
+}
+
+.section {
+  background-color: #2e2e2e;
+  border: 2px solid #7DF9FF;
+  border-radius: 10px;
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 800px;
+  box-shadow: 0 0 10px #CCCCCC;
+}
+.section__titulo {
+  color: #7DF9FF;
+  text-shadow: 0 0 10px #7DF9FF;
+  margin-bottom: 1rem;
+}
+.section__texto {
+  color: #f8f8f8;
+  line-height: 1.6;
+}
+
+/*Estrutura geral da página*/
+.header {
+  background-color: #111111;
+  border-bottom: 2px solid #7DF9FF;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+}
+.header__titulos {
+  color: #7DF9FF;
+  text-shadow: 0 0 10px #7DF9FF;
+}
+.header__texto {
+  color: #fff;
+}
+
+.nav__lista {
+  display: flex;
+  margin: 1rem;
+  list-style: none;
+}
+
+.form {
+  background-color: #111111;
+  border: 3px solid #39FF14;
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form__etiqueta {
+  color: #fff;
+  font-weight: bold;
+}
+
+.form__input {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.5rem;
+  border: 1px solid #7b68ee;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.form__input:hover {
+  border-color: #39FF14;
+  box-shadow: 0 0 10px #39FF14;
+}
+.form__input:focus {
+  border-color: #39FF14;
+  box-shadow: 0 0 10px #ffd700;
+  outline: none;
+}
+
+.footer {
+  background-color: #0A0A0A;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-top: 2px solid #7DF9FF;
+  width: 100%;
+}
+.footer__texto {
+  color: #7DF9FF;
+}
+
+.servicos__lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.servicos__item {
+  background-color: #f8f8f8;
+  color: #0A0A0A;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: 0.3s;
+}
+.servicos__item:hover {
+  transform: translateY(-3px);
+}
+
+.depoimento__item {
+  background-color: #fff;
+  color: #0A0A0A;
+  border-radius: 8px;
+  margin: 1rem;
+  padding: 1rem;
+  max-width: 800px;
+}
+
+/*# sourceMappingURL=estilos.css.map */

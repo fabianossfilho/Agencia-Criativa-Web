@@ -1,0 +1,104 @@
+/*Estrutura geral da página*/
+@use "variaveis" as v;
+
+.header {
+    background-color: v.$header-backgrnd;
+    border-bottom: 2px solid v.$azul-elect;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+
+    &__titulos {
+        color: v.$azul-elect;
+        text-shadow: 0 0 10px v.$azul-elect;
+
+    }
+    &__texto {
+        color: v.$branco;
+
+    }
+}
+
+.nav__lista {
+    display: flex;
+    margin: 1rem;
+    list-style: none;
+}
+
+.form{
+     background-color: v.$header-backgrnd;
+    border: 3px solid v.$verde-neon;
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.form__etiqueta {
+    color: v.$branco;
+    font-weight: bold;
+}
+
+.form__input {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.5rem;
+    border: 1px solid #7b68ee;
+    border-radius: 5px;
+    transition: v.$trans-time;
+
+    &:hover {
+        border-color: v.$verde-neon;
+        box-shadow: 0 0 10px v.$verde-neon;
+    }
+
+    &:focus {
+        border-color: v.$verde-neon;
+        box-shadow: 0 0 10px v.$focus;
+        outline: none;
+    }
+}
+
+.footer {
+    background-color: v.$preto;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-top: 2px solid v.$azul-elect;
+    width: 100%;
+
+    &__texto {
+        color: v.$azul-elect;
+    }
+}
+
+.servicos__lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+
+.servicos__item {
+    background-color: v.$cor-secundaria;
+    color: v.$preto;
+    border-radius: 8px;
+    padding: 1rem;
+    transition: v.$trans-time;
+
+    &:hover {
+        transform: translateY(-3px)
+    }
+}
+
+
+.depoimento__item {
+    background-color: v.$branco;
+    color: v.$preto;
+    border-radius: 8px;
+    margin: 1rem;
+    padding: 1rem;
+    max-width: 800px;
+}

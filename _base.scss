@@ -1,0 +1,36 @@
+/*Estilos base como body, tipografia, reset)*/
+@use "variaveis" as v;
+@use "mixins" as m;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  font-family: v.$fontes;
+  font-size: 1rem;
+  color: v.$branco;
+  background-color: v.$preto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100vw;
+}
+
+a {
+    margin: 3rem;
+    color: v.$verde-neon;
+    text-decoration: none;
+    font-weight: bold;
+    transition: v.$trans-time;
+
+    &:hover {
+      @include m.borda-redonda;
+      color: v.$preto;
+      background-color: v.$verde-neon;
+      padding: 0.2rem 0.5rem;
+
+    }
+}
