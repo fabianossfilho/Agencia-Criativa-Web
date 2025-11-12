@@ -1,0 +1,19 @@
+/*Estilos reutilizáveis*/
+/*Criar pelo menos 2 mixins reutilizáveis 
+    (ex: espaçamentos padrão, botão básico, border).*/
+
+@mixin borda-redonda ($raio: 5px) {
+    border-radius: $raio;
+}
+
+@mixin espaco-padrao {
+    padding: 1rem;
+    margin: 1rem;
+}
+
+@mixin botao-basico {
+    border: none;
+    padding: 0.7rem 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
